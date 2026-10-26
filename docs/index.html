@@ -1,0 +1,360 @@
+<!DOCTYPE html><html lang="pt-BR"><head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Converta imagens, áudio, vídeo, PDF e Office no Windows. Arraste, escolha o formato e salve ao lado do original. Download oficial do Uniconvert.">
+<link rel="icon" href="assets/logo.png">
+<link rel="stylesheet" href="styles.css">
+<title>Uniconvert — Converta arquivos sem sair do seu fluxo</title>
+  
+  
+  <style>
+    
+    :root {
+      --ink: #0a1020;
+      --background: #f4f5f8;
+      --white: #ffffff;
+      --muted: #667085;
+      --blue: #386eff;
+      --cyan: #19d9f2;
+      --purple: #8d42ee;
+      --border: #e4e7ee;
+    }
+
+    body {
+      font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+      background-color: var(--background);
+      color: var(--ink);
+      margin: 0;
+    }
+
+    .hero-gradient {
+      background: linear-gradient(180deg, var(--ink) 0%, #0d162d 100%);
+    }
+
+    .accent-gradient {
+      background: linear-gradient(135deg, var(--cyan), var(--blue), var(--purple));
+    }
+
+    .radial-demo-container {
+      position: relative;
+      width: 480px;
+      height: 480px;
+    }
+
+    .orbit-path {
+      position: absolute;
+      border: 2px dashed rgba(255, 255, 255, 0.1);
+      border-radius: 50%;
+      inset: 40px;
+    }
+
+    .keyboard-key {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      box-shadow: 0 4px 0 rgba(0,0,0,0.3);
+    }
+
+    .card-shadow {
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+    }
+
+    h1 {
+      line-height: 1.05 !important;
+      letter-spacing: -0.02em;
+    }
+
+    .section-gap {
+      padding-top: 96px;
+      padding-bottom: 96px;
+    }
+  </style>
+</head>
+<body>
+<a class="skip-link" href="#demo">Pular para a demonstração</a>
+  <div class="min-h-screen">
+    <!-- Sticky Navigation -->
+    <nav class="sticky top-0 z-50 w-full bg-white border-b border-[#e4e7ee] px-6 py-4">
+      <div class="max-w-[1120px] mx-auto flex items-center justify-between">
+        <div class="flex items-center gap-3">
+          <img src="assets/logo.png" alt="Uniconvert Logo" class="h-8 w-8 object-contain rounded-lg">
+          <span class="font-bold text-xl tracking-tight text-[#0a1020]">Uniconvert</span>
+        </div>
+        <div class="hidden md:flex items-center gap-8">
+          <a href="#demo" id="nav-features" class="text-sm font-medium text-[#667085] hover:text-[#0a1020] transition-colors">Recursos</a>
+          <a href="#formats" id="nav-formats" class="text-sm font-medium text-[#667085] hover:text-[#0a1020] transition-colors">Formatos</a>
+          <a href="#privacy" id="nav-privacy" class="text-sm font-medium text-[#667085] hover:text-[#0a1020] transition-colors">Privacidade</a>
+          <a href="#download" id="nav-cta" class="bg-[#386eff] text-white px-5 py-2 rounded-[12px] text-sm font-semibold hover:opacity-90 transition-opacity">Baixar para Windows</a>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-gradient pt-24 pb-32 overflow-hidden">
+      <div class="max-w-[1120px] mx-auto px-6 flex flex-col lg:flex-row items-center gap-16">
+        <div class="flex-1 text-center lg:text-left">
+          <h1 class="text-[42px] lg:text-[72px] font-bold text-white mb-6">
+            Converta arquivos.<br>Sem sair do seu fluxo.
+          </h1>
+          <p class="text-lg lg:text-xl text-white/70 mb-10 max-w-lg mx-auto lg:mx-0">
+            Tudo. Em um clique. Offline.
+          </p>
+          <div class="flex flex-col sm:flex-row items-center gap-4 justify-center lg:justify-start">
+            <a href="https://github.com/Soares007/uniconvert-releases/releases/latest/download/Uniconvert-Setup.exe" id="hero-download" data-download class="accent-gradient px-8 py-4 rounded-[12px] text-white font-bold flex items-center gap-3 shadow-xl hover:scale-105 transition-transform">
+              <svg aria-hidden="true" focusable="false" class="inline-icon text-2xl" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="1em" height="1em" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12m-4-4 4 4 4-4M5 15v5h14v-5"/></svg>
+              Baixar para Windows (x64)
+            </a>
+            <span class="text-xs text-white/40 font-mono"><span data-version>Última versão estável</span></span>
+          </div>
+          <div class="mt-12 flex items-center gap-6 justify-center lg:justify-start">
+             <div class="flex items-center gap-2 text-white/60">
+               <svg aria-hidden="true" focusable="false" class="inline-icon text-cyan-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="1em" height="1em" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3 3 7v6c0 5 9 9 9 9s9-4 9-9V7Z"/><path d="m8 12 3 3 5-6"/></svg>
+               <span class="text-sm">Processamento Local</span>
+             </div>
+             <div class="flex items-center gap-2 text-white/60">
+               <svg aria-hidden="true" focusable="false" class="inline-icon text-cyan-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="1em" height="1em" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="m13 2-9 12h7l-1 8 10-13h-7Z"/></svg>
+               <span class="text-sm">Sem Upload</span>
+             </div>
+          </div>
+        </div>
+        
+        <div class="flex-1 relative">
+          <div class="bg-[#0a1020] border border-white/10 rounded-[20px] p-2 shadow-2xl overflow-hidden">
+             <img src="assets/logo.png" class="w-full max-w-[500px] aspect-square object-contain" alt="Uniconvert Logo Visual">
+          </div>
+          <div class="absolute -z-10 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[140%] h-[140%] bg-blue-600/20 blur-[100px] rounded-full"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Stats -->
+    <section class="bg-[#0a1020] border-t border-white/5 py-12">
+      <div class="max-w-[1120px] mx-auto px-6 grid grid-cols-2 md:grid-cols-4 gap-8">
+        <div class="flex items-center gap-4">
+          <svg aria-hidden="true" focusable="false" class="inline-icon text-3xl text-cyan-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="1em" height="1em" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 22h8m-4-5v5"/></svg>
+          <span class="text-white/80 text-sm leading-tight font-medium">Direto da<br>Área de Trabalho</span>
+        </div>
+        <div class="flex items-center gap-4">
+          <svg aria-hidden="true" focusable="false" class="inline-icon text-3xl text-purple-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="1em" height="1em" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7V4h7l3 3h8v14H3Z"/><path d="M8 12c-2-3-5 1 4 6 9-5 6-9 3-6l-3 2Z"/></svg>
+          <span class="text-white/80 text-sm leading-tight font-medium">Arquivos do<br>seu dia a dia</span>
+        </div>
+        <div class="flex items-center gap-4">
+          <svg aria-hidden="true" focusable="false" class="inline-icon text-3xl text-blue-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="1em" height="1em" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="m5 3 1 17 5-5 4 7 3-2-5-7 7-1Z"/></svg>
+          <span class="text-white/80 text-sm leading-tight font-medium">Tudo em<br>um clique</span>
+        </div>
+        <div class="flex items-center gap-4">
+          <svg aria-hidden="true" focusable="false" class="inline-icon text-3xl text-cyan-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="1em" height="1em" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="m3 3 18 18M2 8a17 17 0 0 1 6-3m7 0a17 17 0 0 1 7 3M5 12a10 10 0 0 1 6-3m6 2 2 1M8 16a6 6 0 0 1 5-1"/><circle cx="12" cy="20" r="1"/></svg>
+          <span class="text-white/80 text-sm leading-tight font-medium">Funciona<br>offline</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Interactive Demo Section -->
+    <section id="demo" class="section-gap bg-white">
+      <div class="max-w-[1120px] mx-auto px-6">
+        <div class="text-center mb-16">
+          <span class="text-[#386eff] font-bold text-sm tracking-widest uppercase mb-4 block">Demonstração</span>
+          <h2 class="text-[40px] font-bold text-[#0a1020]">Gestos integrados ao Windows</h2>
+          <p class="text-[#667085] mt-4">Arraste, segure a tecla e solte sobre a opção. Experimente o exemplo abaixo: ele não usa seus arquivos.</p>
+        </div>
+
+        <div class="flex flex-col lg:flex-row items-center gap-20">
+          <div class="flex-1 flex justify-center">
+            <div id="demo-interactive" tabindex="0" aria-label="Demonstração de conversão. Use os botões de formato ou os atalhos Shift, Control e Alt." class="radial-demo-container flex items-center justify-center">
+              <div class="orbit-path" style="border-color:#dce2ef"></div>
+              <div class="relative z-10 w-32 h-44 bg-white border border-[#e4e7ee] rounded-xl flex flex-col items-center justify-center shadow-xl">
+                <svg aria-hidden="true" focusable="false" class="inline-icon text-5xl text-[#386eff] mb-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="1em" height="1em" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H5v20h14V7Z M14 2v6h5M8 12h8m-8 4h6"/></svg>
+                <span id="demo-file" class="text-xs font-bold font-mono text-[#0a1020]">arquivo.pdf</span>
+              </div>
+              <div class="absolute top-0 w-16 h-16 bg-[#0a1020] rounded-xl flex items-center justify-center border border-white/10 shadow-lg -translate-y-8">
+                <button type="button" class="demo-choice text-white font-bold text-sm" data-choice="0" aria-label="Simular PNG">PNG</button>
+              </div>
+              <div class="absolute bottom-0 w-16 h-16 bg-[#0a1020] rounded-xl flex items-center justify-center border border-white/10 shadow-lg translate-y-8">
+                <button type="button" class="demo-choice text-white font-bold text-sm" data-choice="1" aria-label="Simular TXT">TXT</button>
+              </div>
+              <div class="absolute right-0 w-16 h-16 bg-[#0a1020] rounded-xl flex items-center justify-center border border-white/10 shadow-lg translate-x-8">
+                <button type="button" class="demo-choice text-white font-bold text-sm" data-choice="2" aria-label="Simular DOCX">DOCX</button>
+              </div>
+              <div class="absolute left-0 w-16 h-16 bg-[#0a1020] rounded-xl flex items-center justify-center border border-white/10 shadow-lg -translate-x-8">
+                <button type="button" class="demo-choice text-white font-bold text-sm" data-choice="3" aria-label="Simular JPG">JPG</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="flex-1">
+            <div class="space-y-8">
+              <div class="flex gap-6">
+                <button type="button" data-mode="SHIFT" class="keyboard-key min-w-[60px] h-12 rounded-lg flex items-center justify-center text-xs font-bold text-[#0a1020]" aria-pressed="true">SHIFT</button>
+                <div>
+                  <h3 class="font-bold text-lg mb-1">Menu de Formatos</h3>
+                  <p class="text-[#667085] text-sm">Segure Shift ao arrastar um arquivo para visualizar e escolher formatos de conversão imediatos.</p>
+                </div>
+              </div>
+              <div class="flex gap-6">
+                <button type="button" data-mode="CTRL" class="keyboard-key min-w-[60px] h-12 rounded-lg flex items-center justify-center text-xs font-bold text-[#0a1020]" aria-pressed="false">CTRL</button>
+                <div>
+                  <h3 class="font-bold text-lg mb-1">Ferramentas e PDF</h3>
+                  <p class="text-[#667085] text-sm">Acessa utilitários de compressão, redimensionamento, operações em PDF e criação de arquivos ZIP.</p>
+                </div>
+              </div>
+              <div class="flex gap-6">
+                <button type="button" data-mode="ALT" class="keyboard-key min-w-[60px] h-12 rounded-lg flex items-center justify-center text-xs font-bold text-[#0a1020]" aria-pressed="false">ALT</button>
+                <div>
+                  <h3 class="font-bold text-lg mb-1">Ações de Arquivo</h3>
+                  <p class="text-[#667085] text-sm">Copie o arquivo, o caminho completo (path) ou abra a localização original na pasta instantaneamente.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <p id="demo-status" role="status" aria-live="polite" class="text-center text-sm text-[#667085] px-6 py-4 bg-white">Demonstração: escolha um formato para ver o resultado.</p>
+    <section class="steps-band" aria-label="Como usar"><div><b>01</b><h3>Arraste o arquivo</h3><p>Na Área de Trabalho ou no Explorador.</p></div><div><b>02</b><h3>Segure Shift e escolha</h3><p>Solte sobre o formato desejado.</p></div><div><b>03</b><h3>Pronto. Está ao lado.</h3><p>Mesmo nome, nova extensão. Original preservado.</p></div></section>
+    <!-- Formats -->
+    <section id="formats" class="section-gap bg-[#f4f5f8]">
+      <div class="max-w-[1120px] mx-auto px-6">
+        <h2 class="text-3xl font-bold mb-12 text-center">Os formatos do seu dia a dia</h2>
+        <div class="grid md:grid-cols-3 gap-8">
+          <div class="bg-white p-8 rounded-[20px] card-shadow">
+            <div class="w-12 h-12 bg-blue-50 rounded-xl flex items-center justify-center text-[#386eff] mb-6">
+              <svg aria-hidden="true" focusable="false" class="inline-icon text-2xl" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="1em" height="1em" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8" cy="8" r="2"/><path d="m3 17 5-5 4 4 4-6 5 7"/></svg>
+            </div>
+            <h3 class="font-bold text-lg mb-4">Imagens</h3>
+            <div class="flex flex-wrap gap-2">
+              <span class="px-3 py-1 bg-[#f4f5f8] text-[#667085] rounded-full text-xs font-bold">PNG</span>
+              <span class="px-3 py-1 bg-[#f4f5f8] text-[#667085] rounded-full text-xs font-bold">JPG</span>
+              <span class="px-3 py-1 bg-[#f4f5f8] text-[#667085] rounded-full text-xs font-bold">WebP</span>
+              <span class="px-3 py-1 bg-[#f4f5f8] text-[#667085] rounded-full text-xs font-bold">AVIF</span>
+              <span class="px-3 py-1 bg-[#f4f5f8] text-[#667085] rounded-full text-xs font-bold">PDF</span>
+              <span class="px-3 py-1 bg-[#f4f5f8] text-[#667085] rounded-full text-xs font-bold">BMP</span>
+            </div>
+          </div>
+          <div class="bg-white p-8 rounded-[20px] card-shadow">
+            <div class="w-12 h-12 bg-purple-50 rounded-xl flex items-center justify-center text-purple-600 mb-6">
+              <svg aria-hidden="true" focusable="false" class="inline-icon text-2xl" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="1em" height="1em" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="5" width="14" height="14" rx="2"/><path d="m16 10 6-4v12l-6-4"/></svg>
+            </div>
+            <h3 class="font-bold text-lg mb-4">Vídeo &amp; Áudio</h3>
+            <div class="flex flex-wrap gap-2">
+              <span class="px-3 py-1 bg-[#f4f5f8] text-[#667085] rounded-full text-xs font-bold">MP4</span>
+              <span class="px-3 py-1 bg-[#f4f5f8] text-[#667085] rounded-full text-xs font-bold">MOV</span>
+              <span class="px-3 py-1 bg-[#f4f5f8] text-[#667085] rounded-full text-xs font-bold">MP3</span>
+              <span class="px-3 py-1 bg-[#f4f5f8] text-[#667085] rounded-full text-xs font-bold">WAV</span>
+              <span class="px-3 py-1 bg-[#f4f5f8] text-[#667085] rounded-full text-xs font-bold">FLAC</span>
+              <span class="px-3 py-1 bg-[#f4f5f8] text-[#667085] rounded-full text-xs font-bold">M4A</span>
+            </div>
+          </div>
+          <div class="bg-white p-8 rounded-[20px] card-shadow">
+            <div class="w-12 h-12 bg-cyan-50 rounded-xl flex items-center justify-center text-cyan-600 mb-6">
+              <svg aria-hidden="true" focusable="false" class="inline-icon text-2xl" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="1em" height="1em" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H5v20h14V7Z M14 2v6h5M8 12h8m-8 4h8m-4-4v7"/></svg>
+            </div>
+            <h3 class="font-bold text-lg mb-4">Documentos</h3>
+            <div class="flex flex-wrap gap-2">
+              <span class="px-3 py-1 bg-[#f4f5f8] text-[#667085] rounded-full text-xs font-bold">DOCX</span>
+              <span class="px-3 py-1 bg-[#f4f5f8] text-[#667085] rounded-full text-xs font-bold">XLSX</span>
+              <span class="px-3 py-1 bg-[#f4f5f8] text-[#667085] rounded-full text-xs font-bold">PPTX</span>
+              <span class="px-3 py-1 bg-[#f4f5f8] text-[#667085] rounded-full text-xs font-bold">TXT</span>
+              <span class="px-3 py-1 bg-[#f4f5f8] text-[#667085] rounded-full text-xs font-bold">PDF</span>
+              <span class="px-3 py-1 bg-[#f4f5f8] text-[#667085] rounded-full text-xs font-bold">ZIP</span>
+            </div>
+          </div>
+        </div>
+        <p class="mt-8 text-center text-sm text-[#667085]">PDF para Word/TXT extrai texto selecionável. Não há OCR nem reconstrução da diagramação. As opções dependem do arquivo selecionado.</p>
+      </div>
+    </section>
+
+    <section class="format-details" aria-label="Formatos e ferramentas em detalhes">
+      <details><summary>Documentos, planilhas e apresentações Office</summary><p>Documentos → PDF, DOCX, ODT, RTF, TXT e HTML. Planilhas → PDF, XLSX, ODS, CSV e TSV. Apresentações → PDF, PPTX e ODP. Mecanismo LibreOffice incluído no instalador.</p></details>
+      <details><summary>PDF, áudio e vídeo</summary><p>PDF → PNG ou JPG por página, TXT e DOCX com texto selecionável. Áudio → MP3, WAV, FLAC e OGG. Vídeo → MP4, WebM ou extração de áudio em MP3/WAV. Imagens → PNG, JPG, WebP, BMP, TIFF, AVIF e PDF.</p></details>
+      <details><summary>Ferramentas e ações</summary><p>Comprimir e redimensionar imagens; juntar, separar e compactar PDFs; criar ZIP. Copiar arquivos, copiar caminhos e abrir a pasta de origem. F8 pausa ou reativa os atalhos, com tecla configurável.</p></details>
+    </section>
+    <!-- Privacy Section -->
+    <section id="privacy" class="section-gap bg-white">
+      <div class="max-w-[1120px] mx-auto px-6">
+        <div class="bg-[#0a1020] rounded-[32px] p-12 lg:p-20 relative overflow-hidden">
+          <div class="relative z-10 grid lg:grid-cols-2 gap-12 items-center">
+            <div>
+              <h2 class="text-3xl lg:text-4xl font-bold text-white mb-6">Seus arquivos não saem da sua máquina.</h2>
+              <p class="text-white/60 mb-8 leading-relaxed">
+                O Uniconvert processa arquivos inteiramente em seu hardware. Não há uploads para servidores externos ou processamento em nuvem.
+              </p>
+              <ul class="space-y-4">
+                <li class="flex items-center gap-3 text-white">
+                  <svg aria-hidden="true" focusable="false" class="inline-icon text-cyan-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="1em" height="1em" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="m7 12 3 3 7-7"/></svg>
+                  <span>Conversão 100% Offline</span>
+                </li>
+                <li class="flex items-center gap-3 text-white">
+                  <svg aria-hidden="true" focusable="false" class="inline-icon text-cyan-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="1em" height="1em" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="m7 12 3 3 7-7"/></svg>
+                  <span>Processamento direto no Windows</span>
+                </li>
+              </ul>
+            </div>
+            <div class="flex justify-center">
+              <div class="w-64 h-64 border-4 border-cyan-400/20 rounded-full flex items-center justify-center">
+                <div class="w-48 h-48 bg-cyan-400/10 rounded-full flex items-center justify-center animate-pulse">
+                   <svg aria-hidden="true" focusable="false" class="inline-icon text-7xl text-cyan-400 opacity-50" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="1em" height="1em" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3 3 7v6c0 5 9 9 9 9s9-4 9-9V7Z"/><path d="m8 12 3 3 5-6"/></svg>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="absolute inset-0 opacity-10 pointer-events-none" style="background-image: radial-gradient(var(--cyan) 1px, transparent 1px); background-size: 24px 24px;"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section-gap bg-[#f4f5f8]">
+      <div class="max-w-[1120px] mx-auto px-6">
+        <h2 class="text-3xl font-bold text-center mb-16">Perguntas Frequentes</h2>
+        <div class="grid md:grid-cols-2 gap-12">
+          <div>
+            <h4 class="font-bold text-lg mb-3 text-[#0a1020]">Como funcionam as atualizações?</h4>
+            <p class="text-[#667085] leading-relaxed">O aplicativo consulta o GitHub ao iniciar, quando há conexão. Essa consulta não envia arquivos. Se uma nova versão for encontrada, ele solicitará sua confirmação antes de baixar ou instalar qualquer arquivo.</p>
+          </div>
+          <div>
+            <h4 class="font-bold text-lg mb-3 text-[#0a1020]">Onde os arquivos convertidos são salvos?</h4>
+            <p class="text-[#667085] leading-relaxed">Os arquivos convertidos são salvos na mesma pasta de origem, mantendo o nome base e atualizando apenas a extensão. Se o nome já existir, a cópia recebe um número. Saídas com várias páginas recebem identificadores.</p>
+          </div>
+          <div>
+            <h4 class="font-bold text-lg mb-3 text-[#0a1020]">O software tem custos?</h4>
+            <p class="text-[#667085] leading-relaxed">Não. O Uniconvert é uma ferramenta gratuita sem assinaturas ou contas obrigatórias.</p>
+          </div>
+          <div>
+            <h4 class="font-bold text-lg mb-3 text-[#0a1020]">Compatibilidade</h4>
+            <p class="text-[#667085] leading-relaxed">Desenvolvido especificamente para Windows 10 e 11 x64, integrando-se nativamente ao fluxo de trabalho do explorador de arquivos.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section id="download" class="section-gap bg-[#0a1020] text-white text-center">
+      <div class="max-w-[800px] mx-auto px-6">
+        <img src="assets/logo.png" alt="Logo" class="h-20 w-20 mx-auto mb-8 object-contain">
+        <h2 class="text-[40px] font-bold mb-6">Pronto para simplificar seu fluxo?</h2>
+        <p class="text-white/60 mb-12 text-lg">Baixe sempre a versão estável mais recente e esqueça os uploads para conversões simples.</p>
+        <a href="https://github.com/Soares007/uniconvert-releases/releases/latest/download/Uniconvert-Setup.exe" id="footer-cta" data-download class="inline-flex items-center gap-3 bg-white text-[#0a1020] px-10 py-5 rounded-[12px] font-bold text-xl hover:bg-cyan-400 transition-colors">
+           <svg aria-hidden="true" focusable="false" class="inline-icon text-2xl" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="1em" height="1em" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="8" height="8"/><rect x="14" y="2" width="8" height="8"/><rect x="2" y="14" width="8" height="8"/><rect x="14" y="14" width="8" height="8"/></svg>
+           Baixar instalador .EXE
+        </a>
+        <p class="mt-8 text-xs text-white/30 font-mono">Windows 10/11 x64 · Um instalador .exe · Sem Python ou BAT</p>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-white py-12 border-t border-[#e4e7ee]">
+      <div class="max-w-[1120px] mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-8">
+        <div class="flex items-center gap-3">
+           <img src="assets/logo.png" class="h-6 w-6 " alt="Logo">
+           <span class="text-[#667085] text-sm font-medium">© 2026 Uniconvert. Todos os direitos reservados.</span>
+        </div>
+        <div class="flex gap-8">
+           <a href="https://github.com/Soares007/uniconvert-releases/releases" aria-label="Histórico de versões no GitHub" id="footer-github" class="text-[#667085] hover:text-[#0a1020] transition-colors">
+             <svg aria-hidden="true" focusable="false" class="inline-icon text-2xl" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="1em" height="1em" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M8 21v-4c-5 1-6-2-6-2m14 6v-4c3-1 4-3 4-6 0-2-1-3-2-4V3l-5 2h-2L6 3v4c-1 1-2 2-2 4 0 3 1 5 4 6"/></svg>
+           </a>
+        </div>
+      </div>
+    </footer>
+  </div>
+<script src="app.js" defer></script>
+</body></html>

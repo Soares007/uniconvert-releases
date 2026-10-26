@@ -4,7 +4,7 @@ Instalador oficial, atualizações e avisos do Uniconvert. O código do aplicati
 
 ## Download
 
-A primeira versão está sendo preparada. Quando publicada, o instalador estará em [Última versão estável](https://github.com/Soares007/uniconvert-releases/releases/latest).
+O instalador completo está em [Última versão estável](https://github.com/Soares007/uniconvert-releases/releases/latest).
 
 Cada release contém `Uniconvert-Setup.exe`, `update.json` e `SHA256SUMS.txt`. O instalador inclui bibliotecas e mecanismo Office; não é necessário Python ou BAT. Windows10/11 x64.
 
@@ -17,3 +17,5 @@ Cada release contém `Uniconvert-Setup.exe`, `update.json` e `SHA256SUMS.txt`. O
 - Consulta de atualização ao iniciar e confirmação antes do download/instalação.
 
 Conversões de PDF para Word/TXT extraem texto selecionável, sem OCR nem reconstrução do layout. Consulte os avisos de componentes incluídos no instalador.
+
+Página oficial: https://soares007.github.io/uniconvert-releases/
